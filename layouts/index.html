@@ -2,18 +2,17 @@
 {{ partial "header" . }}
 
 
-<div style="margin-left: auto; margin-right: auto;width: 640px">
-
-    <img src="/images/home.jpg">
-
-    <p style="text-align: center;font-style: italic;">since 2019</p>
-
-</div>
-
 <div class="content">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-12 col-lg-8">
+
+                <div style="display: flex; justify-content: center;">
+                    <div>
+                        <img src="/images/home.jpg" style="max-width: 100%;">
+                        <p style="text-align: center;font-style: italic;">since 2019</p>
+                    </div>
+                </div>
 
                 <div class="mx-0 mx-md-4 posts">
                     {{ range .Data.Pages.GroupByDate "2006" "desc"}}
