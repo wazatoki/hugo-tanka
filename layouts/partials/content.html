@@ -3,4 +3,5 @@
     {{ .Content | replaceRE "<img src=\"/(.*)\\/(.*)\" alt=(.*) (.*)>" $newImage | safeHTML }}
 {{ else }}
     {{ .Content }}
+    {{ template "_internal/disqus.html" . }}
 {{ end }}
